@@ -289,8 +289,18 @@ public class Main {
     public static void task20() {
         List<Student> students = Util.getStudents();
         List<Examination> examinations = Util.getExaminations();
+        Map<String, Double> exams = students.stream().collect(Collectors.groupingBy(student -> student.getFaculty(),
+                Collectors.averagingDouble(student -> {
+                    return examinations.stream()
+                            .filter(examination -> examination.getStudentId() == student.getId())
+                            .map(examination -> examination.getExam1())
+                            .findFirst().orElse(0);
 
-//        students.stream() Продолжить ...
+                })));
+        Optional<String> facultyWithMaxMark = exams.entrySet()
+                .stream()
+                .max(Map.Entry.comparingByValue())
+                .map(entry -> entry.getKey());
     }
 
     public static void task21() {
