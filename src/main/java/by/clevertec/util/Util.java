@@ -50,17 +50,16 @@ public class Util {
         List<Person> personList = getPersons();
 
         return List.of(
-                new House(1, BUILDING_TYPE_HOSPITAL, personList.subList(0, 40)),
-                new House(2, BUILDING_TYPE_OTHER, personList.subList(41, 141)),
-                new House(3, BUILDING_TYPE_OTHER, personList.subList(142, 200)),
-                new House(4, BUILDING_TYPE_OTHER, personList.subList(201, 299)),
-                new House(5, BUILDING_TYPE_OTHER, personList.subList(300, 399)),
-                new House(6, BUILDING_TYPE_OTHER, personList.subList(400, 499)),
-                new House(7, BUILDING_TYPE_OTHER, personList.subList(500, 599)),
-                new House(8, BUILDING_TYPE_OTHER, personList.subList(600, 699)),
-                new House(9, BUILDING_TYPE_OTHER, personList.subList(700, 799)),
-                new House(10, BUILDING_TYPE_OTHER, personList.subList(800, 899)),
-                new House(11, BUILDING_TYPE_OTHER, personList.subList(900, 999))
+                new House(1, BUILDING_TYPE_HOSPITAL, personList.subList(0, 10)),
+                new House(2, BUILDING_TYPE_OTHER, personList.subList(11, 21)),
+                new House(3, BUILDING_TYPE_OTHER, personList.subList(22, 30)),
+                new House(4, BUILDING_TYPE_OTHER, personList.subList(31, 40)),
+                new House(5, BUILDING_TYPE_OTHER, personList.subList(41, 50)),
+                new House(6, BUILDING_TYPE_OTHER, personList.subList(51, 60)),
+                new House(7, BUILDING_TYPE_OTHER, personList.subList(61, 70)),
+                new House(8, BUILDING_TYPE_OTHER, personList.subList(71, 80)),
+                new House(9, BUILDING_TYPE_OTHER, personList.subList(81, 90)),
+                new House(10, BUILDING_TYPE_OTHER, personList.subList(91, 100))
         );
     }
 
